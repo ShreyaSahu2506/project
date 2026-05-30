@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Samanvay | Coordination Operating System</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Segoe UI',sans-serif;
+    background:#f8fafc;
+}
+
+/* Navbar */
+
+.navbar{
+    background:rgba(0,0,0,0.4)!important;
+    backdrop-filter:blur(10px);
+}
+
+.navbar-brand{
+    font-size:2rem;
+    font-weight:800;
+    color:white!important;
+}
+
+.nav-link{
+    color:white!important;
+    font-weight:500;
+}
+
+/* Hero */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:white;
+
+    background:
+    linear-gradient(
+    rgba(0,0,0,0.65),
+    rgba(0,0,0,0.65)
+    ),
+    url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1400&q=80');
+
+    background-size:cover;
+    background-position:center;
+}
+
+.hero h1{
+    font-size:5rem;
+    font-weight:900;
+}
+
+.hero p{
+    max-width:900px;
+    margin:auto;
+    font-size:1.4rem;
+}
+
+.hero-btn{
+    padding:14px 30px;
+    border-radius:40px;
+    font-weight:600;
+}
+
+/* Sections */
+
+.section-title{
+    font-size:2.7rem;
+    font-weight:800;
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.section-subtitle{
+    text-align:center;
+    color:#64748b;
+    max-width:700px;
+    margin:auto auto 50px;
+}
+
+/* Stats */
+
+.stats{
+    margin-top:-70px;
+    position:relative;
+    z-index:100;
+}
+
+.stat-card{
+    background:white;
+    border-radius:20px;
+    padding:30px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,.1);
+}
+
+.stat-card h2{
+    color:#0f766e;
+    font-weight:800;
+}
+
+/* Feature Cards */
+
+.feature-card{
+    background:white;
+    border:none;
+    border-radius:20px;
+    padding:35px;
+    text-align:center;
+    transition:.3s;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    height:100%;
+}
+
+.feature-card:hover{
+    transform:translateY(-8px);
+}
+
+.feature-card i{
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+/* Problem */
+
+.problem-card{
+    background:white;
+    border-radius:18px;
+    padding:25px;
+    text-align:center;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    height:100%;
+}
+
+/* Engine */
+
+.engine-card{
+    background:linear-gradient(135deg,#0f766e,#14b8a6);
+    color:white;
+    border-radius:20px;
+    padding:30px;
+    height:100%;
+}
+
+.engine-card h4{
+    font-weight:700;
+}
+
+/* Vision */
+
+.vision{
+    background:linear-gradient(135deg,#0f766e,#115e59);
+    color:white;
+    padding:90px 20px;
+    text-align:center;
+}
+
+.vision p{
+    font-size:1.4rem;
+    max-width:900px;
+    margin:auto;
+}
+
+/* Footer */
+
+footer{
+    background:#062c2b;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:3rem;
+}
+
+.hero p{
+    font-size:1rem;
+}
+
+.section-title{
+    font-size:2rem;
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+<div class="container">
+
+<a class="navbar-brand" href="#">SAMANVAY</a>
+
+<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="menu">
+
+<ul class="navbar-nav ms-auto">
+
+<li class="nav-item">
+<a class="nav-link" href="#about">About</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#assets">Assets</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#engines">Engines</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#vision">Vision</a>
+</li>
+
+</ul>
+
+</div>
+</div>
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="container">
+
+<h1>SAMANVAY</h1>
+
+<p class="mt-4">
+The Coordination Operating System for the Social Sector.
+Connecting NGOs, Volunteers, Donors, Resources and Expertise
+through a shared collaboration platform.
+</p>
+
+<div class="mt-5">
+
+<button class="btn btn-light hero-btn me-3">
+Get Started
+</button>
+
+<button class="btn btn-outline-light hero-btn">
+Learn More
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- STATS -->
+
+<section class="container stats">
+
+<div class="row g-4">
+
+<div class="col-md-3">
+<div class="stat-card">
+<h2>100+</h2>
+<p>NGOs Connected</p>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="stat-card">
+<h2>5000+</h2>
+<p>Volunteers</p>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="stat-card">
+<h2>10K+</h2>
+<p>Resources Shared</p>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="stat-card">
+<h2>₹50L+</h2>
+<p>Funds Tracked</p>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- PROBLEM -->
+
+<section class="py-5" id="about">
+
+<div class="container">
+
+<h2 class="section-title">The Problem</h2>
+
+<p class="section-subtitle">
+Today NGOs often work independently, resulting in unused resources,
+idle volunteers and lack of transparency.
+</p>
+
+<div class="row g-4">
+
+<div class="col-md-3">
+<div class="problem-card">
+<i class="fa-solid fa-box-open fa-2x text-danger mb-3"></i>
+<h5>Unused Resources</h5>
+<p>Resources remain unused while others face shortages.</p>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="problem-card">
+<i class="fa-solid fa-users-slash fa-2x text-warning mb-3"></i>
+<h5>Idle Volunteers</h5>
+<p>Volunteers are often underutilized.</p>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="problem-card">
+<i class="fa-solid fa-eye-slash fa-2x text-primary mb-3"></i>
+<h5>No Transparency</h5>
+<p>Donors struggle to track impact and spending.</p>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="problem-card">
+<i class="fa-solid fa-copy fa-2x text-success mb-3"></i>
+<h5>Duplicate Efforts</h5>
+<p>Organizations unknowingly repeat the same work.</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ASSETS -->
+
+<section class="py-5 bg-light" id="assets">
+
+<div class="container">
+
+<h2 class="section-title">Four Core Assets</h2>
+
+<p class="section-subtitle">
+Everything in Samanvay revolves around these four asset classes.
+</p>
+
+<div class="row g-4">
+
+<div class="col-md-3">
+<div class="feature-card">
+<i class="fa-solid fa-boxes-stacked text-success"></i>
+<h4>Resources</h4>
+<p>Food, Medicines, Equipment and Vehicles.</p>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="feature-card">
+<i class="fa-solid fa-users text-primary"></i>
+<h4>Volunteers</h4>
+<p>Doctors, Teachers, Drivers and Coordinators.</p>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="feature-card">
+<i class="fa-solid fa-hand-holding-dollar text-warning"></i>
+<h4>Funds</h4>
+<p>Donations, Treasury and Campaign Funds.</p>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="feature-card">
+<i class="fa-solid fa-brain text-danger"></i>
+<h4>Capabilities</h4>
+<p>Legal Aid, Medical Teams and Disaster Response.</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ENGINES -->
+
+<section class="py-5" id="engines">
+
+<div class="container">
+
+<h2 class="section-title">Coordination Engines</h2>
+
+<p class="section-subtitle">
+The core systems that make Samanvay different from traditional NGO software.
+</p>
+
+<div class="row g-4">
+
+<div class="col-md-6">
+<div class="engine-card">
+<h4>Resource Coordination Engine</h4>
+<hr>
+<p>
+Need → Discovery → Offer → Approval → Transfer
+</p>
+</div>
+</div>
+
+<div class="col-md-6">
+<div class="engine-card">
+<h4>Volunteer Coordination Engine</h4>
+<hr>
+<p>
+Need → Matching → Invitation → Acceptance → Assignment
+</p>
+</div>
+</div>
+
+<div class="col-md-6">
+<div class="engine-card">
+<h4>Fund Allocation Engine</h4>
+<hr>
+<p>
+Donation → Fund → Budget → Expense → Reporting
+</p>
+</div>
+</div>
+
+<div class="col-md-6">
+<div class="engine-card">
+<h4>Capability Coordination Engine</h4>
+<hr>
+<p>
+Need → Discovery → Offer → Approval → Deployment
+</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- VISION -->
+
+<section class="vision" id="vision">
+
+<h2 class="mb-4">Our Vision</h2>
+
+<p>
+“We are not building software for NGOs.
+We are building the coordination infrastructure that allows
+independent organizations to work together.”
+</p>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+© 2026 SAMANVAY | Coordination Operating System For The Social Sector
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

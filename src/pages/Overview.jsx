@@ -1,6 +1,15 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
+import {
+  FaUsers,
+  FaDonate,
+  FaHandsHelping,
+  FaGlobe,
+  FaArrowRight,
+  FaChartLine,
+} from "react-icons/fa";
+
 function Overview() {
   return (
     <>
@@ -9,11 +18,13 @@ function Overview() {
       {/* HERO SECTION */}
 
       <section
-        className="text-white d-flex align-items-center"
+        className="text-white"
         style={{
-          minHeight: "90vh",
           background:
             "linear-gradient(135deg,#0f766e,#14b8a6)",
+          minHeight: "90vh",
+          display: "flex",
+          alignItems: "center",
         }}
       >
         <div className="container">
@@ -22,7 +33,12 @@ function Overview() {
 
             <div className="col-lg-6">
 
-              <h1 className="display-2 fw-bold">
+              <h1
+                className="fw-bold"
+                style={{
+                  fontSize: "4rem",
+                }}
+              >
                 SAMANVAY
               </h1>
 
@@ -30,10 +46,15 @@ function Overview() {
                 NGO Coordination Operating System
               </h3>
 
-              <p className="fs-5">
-                Connecting NGOs, Volunteers,
-                Donors and Resources through
-                one unified digital platform.
+              <p
+                className="lead"
+                style={{
+                  maxWidth: "600px",
+                }}
+              >
+                Bringing NGOs, Volunteers, Donors,
+                Resources and Communities together
+                on a single digital platform.
               </p>
 
               <div className="mt-4">
@@ -52,14 +73,24 @@ function Overview() {
 
             <div className="col-lg-6 text-center">
 
-              <img
-                src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
-                alt="NGO"
-                className="img-fluid"
+              <div
+                className="p-5 rounded-4 shadow-lg"
                 style={{
-                  maxHeight: "400px",
+                  background:
+                    "rgba(255,255,255,0.15)",
+                  backdropFilter: "blur(10px)",
                 }}
-              />
+              >
+                <FaGlobe size={120} />
+
+                <h3 className="mt-4">
+                  Connecting Social Impact
+                </h3>
+
+                <p>
+                  One Platform • Unlimited Reach
+                </p>
+              </div>
 
             </div>
 
@@ -68,46 +99,90 @@ function Overview() {
         </div>
       </section>
 
-      {/* STATS */}
+      {/* IMPACT STATS */}
 
-      <section className="container py-5">
+      <section className="py-5 bg-light">
 
-        <div className="row g-4 text-center">
+        <div className="container">
 
-          <div className="col-md-3">
-            <div className="card shadow border-0 p-4">
-              <h1 className="text-success">
-                320+
-              </h1>
-              <h5>Volunteers</h5>
+          <div className="row g-4">
+
+            <div className="col-md-3">
+
+              <div className="card border-0 shadow-lg text-center h-100">
+                <div className="card-body">
+
+                  <FaUsers
+                    size={50}
+                    className="text-primary mb-3"
+                  />
+
+                  <h2>5000+</h2>
+
+                  <p>Volunteers</p>
+
+                </div>
+              </div>
+
             </div>
-          </div>
 
-          <div className="col-md-3">
-            <div className="card shadow border-0 p-4">
-              <h1 className="text-primary">
-                150+
-              </h1>
-              <h5>Resources</h5>
-            </div>
-          </div>
+            <div className="col-md-3">
 
-          <div className="col-md-3">
-            <div className="card shadow border-0 p-4">
-              <h1 className="text-warning">
-                28+
-              </h1>
-              <h5>Events</h5>
-            </div>
-          </div>
+              <div className="card border-0 shadow-lg text-center h-100">
+                <div className="card-body">
 
-          <div className="col-md-3">
-            <div className="card shadow border-0 p-4">
-              <h1 className="text-danger">
-                ₹5.6 Cr
-              </h1>
-              <h5>Funds Managed</h5>
+                  <FaDonate
+                    size={50}
+                    className="text-success mb-3"
+                  />
+
+                  <h2>₹10 Cr+</h2>
+
+                  <p>Funds Managed</p>
+
+                </div>
+              </div>
+
             </div>
+
+            <div className="col-md-3">
+
+              <div className="card border-0 shadow-lg text-center h-100">
+                <div className="card-body">
+
+                  <FaHandsHelping
+                    size={50}
+                    className="text-warning mb-3"
+                  />
+
+                  <h2>100+</h2>
+
+                  <p>NGO Partners</p>
+
+                </div>
+              </div>
+
+            </div>
+
+            <div className="col-md-3">
+
+              <div className="card border-0 shadow-lg text-center h-100">
+                <div className="card-body">
+
+                  <FaChartLine
+                    size={50}
+                    className="text-danger mb-3"
+                  />
+
+                  <h2>50K+</h2>
+
+                  <p>Lives Impacted</p>
+
+                </div>
+              </div>
+
+            </div>
+
           </div>
 
         </div>
@@ -116,102 +191,152 @@ function Overview() {
 
       {/* FEATURES */}
 
-      <section
-        className="py-5"
-        style={{
-          background: "#f8f9fa",
-        }}
-      >
+      <section className="py-5">
+
         <div className="container">
 
-          <h2 className="text-center fw-bold mb-5">
-            Platform Features
-          </h2>
+          <div className="text-center mb-5">
+
+            <h2 className="fw-bold">
+              Platform Features
+            </h2>
+
+            <p className="text-muted">
+              Everything NGOs need in one place
+            </p>
+
+          </div>
 
           <div className="row g-4">
 
             <div className="col-md-4">
-              <div className="card shadow h-100 border-0">
-                <div className="card-body text-center">
-                  <h3>📦</h3>
-                  <h4>Resource Management</h4>
+
+              <div className="card border-0 shadow-lg h-100">
+                <div className="card-body">
+
+                  <h4>
+                    Volunteer Management
+                  </h4>
+
                   <p>
-                    Track food, medicine,
-                    transport and relief resources.
+                    Register, monitor and coordinate
+                    volunteers efficiently.
                   </p>
+
                 </div>
               </div>
+
             </div>
 
             <div className="col-md-4">
-              <div className="card shadow h-100 border-0">
-                <div className="card-body text-center">
-                  <h3>👥</h3>
-                  <h4>Volunteer Network</h4>
+
+              <div className="card border-0 shadow-lg h-100">
+                <div className="card-body">
+
+                  <h4>
+                    Resource Tracking
+                  </h4>
+
                   <p>
-                    Manage and coordinate volunteers
-                    across multiple NGOs.
+                    Manage food, medical and
+                    educational resources.
                   </p>
+
                 </div>
               </div>
+
             </div>
 
             <div className="col-md-4">
-              <div className="card shadow h-100 border-0">
-                <div className="card-body text-center">
-                  <h3>📅</h3>
-                  <h4>Event Management</h4>
+
+              <div className="card border-0 shadow-lg h-100">
+                <div className="card-body">
+
+                  <h4>
+                    Fund Monitoring
+                  </h4>
+
                   <p>
-                    Organize campaigns,
-                    awareness drives and programs.
+                    Track donations and utilization
+                    transparently.
                   </p>
+
                 </div>
               </div>
+
             </div>
 
           </div>
 
         </div>
+
       </section>
 
-      {/* WHY SAMANVAY */}
+      {/* HOW IT WORKS */}
 
-      <section className="container py-5">
+      <section
+        className="py-5 text-white"
+        style={{
+          background:
+            "linear-gradient(135deg,#0f766e,#14b8a6)",
+        }}
+      >
+        <div className="container">
 
-        <h2 className="text-center fw-bold mb-5">
-          Why SAMANVAY?
-        </h2>
+          <h2 className="text-center mb-5">
+            How SAMANVAY Works
+          </h2>
 
-        <div className="row g-4">
+          <div className="row text-center">
 
-          <div className="col-md-4">
-            <div className="card border-0 shadow p-4">
-              <h4>Unified Platform</h4>
+            <div className="col-md-3">
+
+              <h1>1</h1>
+
+              <h5>Register</h5>
+
               <p>
-                One system for NGOs,
-                volunteers and donors.
+                NGOs & Volunteers Join
               </p>
-            </div>
-          </div>
 
-          <div className="col-md-4">
-            <div className="card border-0 shadow p-4">
-              <h4>Real-Time Analytics</h4>
-              <p>
-                Track impact, resources
-                and activities instantly.
-              </p>
             </div>
-          </div>
 
-          <div className="col-md-4">
-            <div className="card border-0 shadow p-4">
-              <h4>Scalable Solution</h4>
+            <div className="col-md-3">
+
+              <h1>2</h1>
+
+              <h5>Connect</h5>
+
               <p>
-                Suitable for local NGOs
-                and national organizations.
+                Find Resources & Support
               </p>
+
             </div>
+
+            <div className="col-md-3">
+
+              <h1>3</h1>
+
+              <h5>Collaborate</h5>
+
+              <p>
+                Manage Events & Activities
+              </p>
+
+            </div>
+
+            <div className="col-md-3">
+
+              <h1>4</h1>
+
+              <h5>Impact</h5>
+
+              <p>
+                Deliver Real Results
+              </p>
+
+            </div>
+
           </div>
 
         </div>
@@ -220,28 +345,34 @@ function Overview() {
 
       {/* CTA */}
 
-      <section
-        className="text-center text-white py-5"
-        style={{
-          background:
-            "linear-gradient(135deg,#0f766e,#14b8a6)",
-        }}
-      >
+      <section className="py-5 bg-light">
+
         <div className="container">
 
-          <h2 className="fw-bold">
-            Ready To Transform NGO Operations?
-          </h2>
+          <div className="card border-0 shadow-lg">
 
-          <p className="mt-3">
-            Join the future of NGO coordination.
-          </p>
+            <div className="card-body text-center p-5">
 
-          <button className="btn btn-light btn-lg mt-2">
-            Join SAMANVAY
-          </button>
+              <h2 className="fw-bold">
+                Ready to Make a Difference?
+              </h2>
+
+              <p className="lead">
+                Join the growing SAMANVAY network
+                and help create social impact.
+              </p>
+
+              <button className="btn btn-success btn-lg">
+                Join Now
+                <FaArrowRight className="ms-2" />
+              </button>
+
+            </div>
+
+          </div>
 
         </div>
+
       </section>
 
       <Footer />
